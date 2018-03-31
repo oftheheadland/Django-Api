@@ -1,6 +1,6 @@
 # 399 Project
 
-> Description of project
+> An open-source Django API Server. 
 
 ![](http://via.placeholder.com/400x400)
 
@@ -25,7 +25,7 @@ Please refer to the [**documentation**](https://cloud.google.com/natural-languag
 
 | Request                      | Quota   |
 | ---------------------------- | ------- |
-| Requests per day             | 800,000 |
+| Requests per day             | 800 |
 | Requests per minute          | 600     |
 | Requests per minute per user | 600     |
 
