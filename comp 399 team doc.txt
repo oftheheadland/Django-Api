@@ -1,8 +1,8 @@
 Team: Lighting
 Class: Comp 399
-Team’s documentation:
+Teamâ€™s documentation:
 [03/31/18]
 	Andrew took the position of step 1 creating the different branches (master <--> staging <--> develop <--> working area) needed for the project and making the README file with an understanding in how to make it a markdown file.
-	Giulian is in charge with keeping up with documenting the team’s progress on this project, where if there are any issues that we run up against I’ll make sure to write and bring it to the professor during next class.
+	Giulian is in charge with keeping up with documenting the teamâ€™s progress on this project, where if there are any issues that we run up against Iâ€™ll make sure to write and bring it to the professor during next class.
 	Prince and Daniel are behind step 3 with creating the script that has any needed directories and permissions. Then finally making the script able to use continuous integration system so for it to cross-platform
-All of this would be uploaded to the repository afterward.
+	All of this would be uploaded to the repository afterward.
