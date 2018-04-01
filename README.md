@@ -2,7 +2,7 @@
 
 > An open-source Django API Server. 
 
-![](http://via.placeholder.com/400x400)
+![](https://www.djangoproject.com/s/img/logos/django-logo-negative.png)
 
 ## How to Use 
 
