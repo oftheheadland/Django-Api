@@ -1,2 +1,5 @@
 src/env
 src/gameapp/db.sqlite3
+src/gameapp/user/__pycache__
+src/gameapp/score/__pycache__
+src/gameapp/gameapp/__pycache__
