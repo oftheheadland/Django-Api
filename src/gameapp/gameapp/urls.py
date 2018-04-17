@@ -6,6 +6,6 @@ urlpatterns = [
     path('user/', uv.HomePageView().create_or_retrieve),
     path('user/<str:uname>/', uv.HomePageView().create_or_retrieve),
 
-    path('score/', sv.HomePageView().get),
-    path('score/<str:uname>/', sv.HomePageView().get),
+    path('score/', sv.HomePageView().create_or_retrieve),
+    path('score/<int:userid>/', sv.HomePageView().create_or_retrieve),
 ]
