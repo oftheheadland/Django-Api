@@ -13,14 +13,13 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 class HomePageView(APIView):
-
   
     @csrf_exempt
     def create_or_retrieve(self, request=None, userid = 0, format=None):
         if request.method == 'GET':
             try:
                 found_score = Score.objects.get(id = userid)
-                data = { "score": found_score.score, "id": id }
+                data = { "score": found_score.score, "id": userid }
                 return HttpResponse(json.dumps(data), status=200)
 
             except ObjectDoesNotExist as e:
@@ -29,12 +28,19 @@ class HomePageView(APIView):
         if request.method == "POST":
             try:
                 found_user = Score.objects.get(id = userid)
+                return HttpResponse(json.dumps({"status":"AlreadyExists"}), status=403)
                     
-                u = Score(score=0)
-                u.save()
-                return HttpResponse(json.dumps({"status":"SuccessScoreSetToZero"}))
+
 
             except ObjectDoesNotExist as e:
-                return HttpResponse(json.dumps({"status":"NoSuchUser3"}), status=404)
+                pass
+    
+            s = Score(score=0)
+            s.save()
+            return HttpResponse(json.dumps({"status":"SuccessScoreSetToZero"}))
+
+
+
+
             
 
