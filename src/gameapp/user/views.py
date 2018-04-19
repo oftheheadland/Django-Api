@@ -5,6 +5,13 @@ import json
 from user.models import User
 from django.views.decorators.csrf import csrf_exempt
 
+
+
+
+
+
+
+
 class HomePageView(APIView):
 
     @csrf_exempt

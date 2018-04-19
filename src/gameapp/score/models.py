@@ -1,9 +1,6 @@
 from django.db import models
 
-# Create your models here.
-
-
-class score(models.Model):
-    score = models.IntegerField()
-    id = models.AutoField(primary_key=True)
+class Score(models.Model):
+    score = models.CharField(max_length=15)
+    id = models.IntegerField(primary_key=True)
     
