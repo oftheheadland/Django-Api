@@ -10,6 +10,6 @@ urlpatterns = [
     path('score/', sv.HomePageView().create_or_retrieve),
     path('score/<int:userid>/', sv.HomePageView().create_or_retrieve),
 
-    path('inventory/', iv.HomePageView().get),
-    path('inventory/<str:objdescription>/', iv.HomePageView().get),
+    path('inventory/', iv.HomePageView().create_or_retrieve),
+    path('inventory/<str:objdescription>/', iv.HomePageView().create_or_retrieve),
 ]
