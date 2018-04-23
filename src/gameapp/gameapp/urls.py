@@ -1,5 +1,6 @@
 from user import views as uv
 from score import views as sv
+from inventory import views as iv
 from django.urls import path
 
 urlpatterns = [
@@ -8,4 +9,7 @@ urlpatterns = [
 
     path('score/', sv.HomePageView().create_or_retrieve),
     path('score/<int:userid>/', sv.HomePageView().create_or_retrieve),
+
+    path('inventory/', iv.HomePageView().create_or_retrieve),
+    path('inventory/<str:objdescription>/', iv.HomePageView().create_or_retrieve),
 ]
