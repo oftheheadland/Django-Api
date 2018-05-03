@@ -7,8 +7,6 @@ from score.models import Score
 from django.views.decorators.csrf import csrf_exempt
 
 
-# GET will expect an ID    localhost:8000/score/<id> and  return the score value
-# POST will create a score of 0 for the specified ID
 
 
 
@@ -30,8 +28,6 @@ class HomePageView(APIView):
                 found_user = Score.objects.get(id = userid)
                 return HttpResponse(json.dumps({"status":"AlreadyExists"}), status=403)
                     
-
-
             except ObjectDoesNotExist as e:
                 pass
     

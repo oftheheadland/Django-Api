@@ -25,7 +25,7 @@ SECRET_KEY = '^-0n+j$(s1si3^6r)z&5ql7gd0cy%naqj0=rb3nto$kixjy5zt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lightning.davechamberlain.net']
+ALLOWED_HOSTS = ['lightning.davechamberlain.net', 'localhost']
 
 
 # Application definition
