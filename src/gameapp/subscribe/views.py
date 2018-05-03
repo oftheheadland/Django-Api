@@ -18,8 +18,8 @@ class HomePageView(APIView):
     def create_or_retrieve(self, request=None, userid = 0, format=None):
         if request.method == 'GET':
             try:
-                found_subscribe = subscribe.objects.get(id = userid)
-                data = { "level": found_subscribe.level, "id": userid }
+                found_subscribe = Subscribe.objects.get(id = userid)
+                data = { "subscribe": found_subscribe.level, "id": userid }
                 return HttpResponse(json.dumps(data), status=200)
 
             except ObjectDoesNotExist as e:
@@ -27,12 +27,12 @@ class HomePageView(APIView):
 
         if request.method == "POST":
             try:
-                found_user = level.objects.get(id = userid)
+                found_user = Subscribe.objects.get(id = userid)
                 return HttpResponse(json.dumps({"status":"AlreadyExists"}), status=403)
 
             except ObjectDoesNotExist as e:
                 pass
 
-            s = level(level=0)
+            s = Subscribe(level=0)
             s.save()
             return HttpResponse(json.dumps({"status":"SuccessScoreSetToZero"}))

@@ -1,0 +1,46 @@
+[27/Apr/2018 03:38:30] "GET /user/zelda HTTP/1.1" 301 0
+[27/Apr/2018 03:38:30] "GET /user/zelda/ HTTP/1.1" 200 26
+[27/Apr/2018 03:38:33] "GET /user/zelda HTTP/1.1" 301 0
+[27/Apr/2018 03:38:33] "GET /user/zelda/ HTTP/1.1" 200 26
+Not Found: /favicon.ico
+[27/Apr/2018 03:38:33] "GET /favicon.ico HTTP/1.1" 404 2832
+[27/Apr/2018 03:40:38] "GET /user/zelda HTTP/1.1" 301 0
+[27/Apr/2018 03:40:38] "GET /user/zelda/ HTTP/1.1" 200 26
+Not Found: /favicon.ico
+[27/Apr/2018 03:40:39] "GET /favicon.ico HTTP/1.1" 404 2832
+Not Found: /
+[27/Apr/2018 03:40:44] "GET / HTTP/1.1" 404 2781
+[27/Apr/2018 03:41:08] "GET /user/zelda/ HTTP/1.1" 200 26
+Not Found: /inventory/zelda/
+[27/Apr/2018 03:41:20] "GET /inventory/zelda/ HTTP/1.1" 404 22
+Not Found: /inventory/i/
+[27/Apr/2018 03:41:25] "GET /inventory/i/ HTTP/1.1" 404 22
+Not Found: /inventory/id/
+[27/Apr/2018 03:41:36] "GET /inventory/id/ HTTP/1.1" 404 22
+Not Found: /inventory/5/
+[27/Apr/2018 03:41:40] "GET /inventory/5/ HTTP/1.1" 404 22
+Not Found: /score/5/
+[27/Apr/2018 03:41:45] "GET /score/5/ HTTP/1.1" 404 22
+Internal Server Error: /subscribe/5/
+Traceback (most recent call last):
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib64/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib64/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/gameserver/Django-Api/src/gameapp/subscribe/views.py", line 21, in create_or_retrieve
+    found_subscribe = subscribe.objects.get(id = userid)
+NameError: name 'subscribe' is not defined
+[27/Apr/2018 03:41:51] "GET /subscribe/5/ HTTP/1.1" 500 68242
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 27, 2018 - 03:27:11
+Django version 2.0.4, using settings 'gameapp.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Not Found: /subscribe/5/
+[27/Apr/2018 03:54:07] "GET /subscribe/5/ HTTP/1.1" 404 22
